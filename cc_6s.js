@@ -50,5 +50,5 @@ function convertCurrency(amount, exchangeRate) {
 }
 
 // Test Data
-console.log(convertCurrency(100, 1.1)); // Converted Amount: $110 Pesos
-console.log(convertCurrency(250, .85)); // Converted Amount: $212.5 Pesos
+console.log(convertCurrency(100, 1.1)); // Converted Amount: $110 
+console.log(convertCurrency(250, .85)); // Converted Amount: $212.5 
