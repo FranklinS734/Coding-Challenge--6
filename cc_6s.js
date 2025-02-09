@@ -52,3 +52,9 @@ function convertCurrency(amount, exchangeRate) {
 // Test Data
 console.log(convertCurrency(100, 1.1)); // Converted Amount: $110 
 console.log(convertCurrency(250, .85)); // Converted Amount: $212.5 
+
+// Task 6: Higher-Order Functions
+let orders = [200, 600, 1200, 450, 720];
+const applyBulkDiscount = (orders, discountFunction) => orders.map(discountFunction);
+let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); // Apply a 10% discount on orders above $500 (?) this helps us creat if else statement
+console.log(discountedOrders); // Should result in this [200, 540, 1080, 450, 648]
