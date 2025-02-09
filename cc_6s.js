@@ -41,3 +41,14 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
 // Test Data
 console.log(calculateSubscriptionCost("Basic", 6, 10)); // Total Cost: $50
 console.log(calculateSubscriptionCost("VIP", 12, 0)); // Total Cost: $240
+
+// Task 5: Returning Values
+function convertCurrency(amount, exchangeRate) {
+    // Converting currency by multiplying amount by rate
+    let convertedAmount = amount * exchangeRate;
+    return `Converted Amount: $${convertedAmount.toFixed(2)}`;
+}
+
+// Test Data
+console.log(convertCurrency(100, 1.1)); // Converted Amount: $110 Pesos
+console.log(convertCurrency(250, .85)); // Converted Amount: $212.5 Pesos
