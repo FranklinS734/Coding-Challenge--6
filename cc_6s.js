@@ -18,3 +18,15 @@ const calculateSalesTax = function(amount, taxRate) {
 // Test Cases
 console.log(calculateSalesTax(100,.07)); // Sales Tax: $7
 console.log(calculateSalesTax(500,.1)); // Sales Tax: $50
+
+// Task 3: Arrow Function
+const calculateBonus = (salary, performanceRating) => {
+    // Creating bonus rates based on performance
+    const bonusRates = { "Amazing": 0.20, "Good": 0.10, "Average": 0.05 };
+    let bonus = salary * (bonusRates[performanceRating] || 0);
+    return `Bonus: $${bonus}`;
+};
+
+// Test Cases
+console.log(calculateBonus(5000, "Amazing")); // Bonus: $1000
+console.log(calculateBonus(7000, "Good"));    // Bonus: $700
