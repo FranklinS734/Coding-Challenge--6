@@ -58,3 +58,17 @@ let orders = [200, 600, 1200, 450, 720];
 const applyBulkDiscount = (orders, discountFunction) => orders.map(discountFunction);
 let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); // Apply a 10% discount on orders above $500 (?) this helps us creat if else statement
 console.log(discountedOrders); // Should result in this [200, 540, 1080, 450, 648]
+
+// Task 7: Closures
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(expense) {
+        totalExpenses += expense;
+        return `Total Expenses: $${totalExpenses}`;
+    };
+}
+
+// Test Cases
+let tracker = createExpenseTracker();
+console.log(tracker(200)); // Total: $200
+console.log(tracker(150)); // Total: $350
